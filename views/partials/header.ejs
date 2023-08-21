@@ -1,0 +1,21 @@
+<header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">EJS</a>
+
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/" class="text-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/sobre" class="text-link">Sobre</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Utilizando a sintaxe typeof, abaixo, é possível validar se foi passado 
+                o valor do parâmetro e definir um valor padrão para exibição genérica 
+        -->
+        <h3 class="text-center pt-4">Página: <%= typeof pagina != "undefined" ? pagina: "Home" %></h3>
+    </header>

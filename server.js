@@ -12,11 +12,43 @@ app.set("view engine", "ejs")
  * - Não é necessário inserir a extensão .ejs pois o server já sabe que estamos utilizando o EJS
  * */
 app.get("/", function(req, res){
-    res.render("index")
+    const items = [
+        {
+        title: "D", 
+        message: "esenvolver aplicações/serviços de forma fácil"
+        },
+        {
+        title: "E", 
+        message: "JS usa JS para renderizar HTML"
+        },
+        {
+        title: "M", 
+        message: "uito mais fácil de usar"
+        },
+        {
+        title: "A", 
+        message: "gil e versátil"
+        },
+        {
+        title: "I", 
+        message: "nstall JS"
+        },
+        {
+        title: "S", 
+        message: "Sintaxe simples"
+        }
+    ]
+
+    const description = "Uma linguagem de modelagem para criação de páginas HTML utilizando JavaScript"
+
+    res.render("pages/index", {
+        qualities: items, 
+        description: description
+    })
 })
 
 app.get("/sobre", function(req, res){
-    res.render("about")
+    res.render("pages/about")
 })
 
 app.listen(8080)
