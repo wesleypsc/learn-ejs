@@ -20,4 +20,4 @@ app.get("/sobre", function(req, res){
 })
 
 app.listen(8080)
-console.log("It's alive")
+console.log("Running...")
